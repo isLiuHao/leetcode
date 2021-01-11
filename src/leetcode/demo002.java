@@ -2,7 +2,7 @@ package leetcode;
 
 import org.junit.Test;
 
-public class demo02 {
+public class demo002 {
     public class ListNode {
       int val;
       ListNode next;

@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
-public class demo01 {
+public class demo001 {
     @Test
     public void isPalindrome() {
         String str="";

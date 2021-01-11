@@ -2,7 +2,7 @@ package leetcode;
 
 import org.junit.Test;
 
-public class demo66 {
+public class demo066 {
     @Test
     public void aa(){
 //        String s="1";

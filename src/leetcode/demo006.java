@@ -1,6 +1,6 @@
 package leetcode;
 
-public class demo06 {
+public class demo006 {
     public String convert(String s, int numRows) {
         if (numRows == 1)
             return s;

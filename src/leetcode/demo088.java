@@ -1,6 +1,6 @@
 package leetcode;
 
-public class demo88 {
+public class demo088 {
 
     public void merge1(int[] nums1, int m, int[] nums2, int n) {
         int k=0;

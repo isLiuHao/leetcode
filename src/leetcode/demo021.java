@@ -1,6 +1,6 @@
 package leetcode;
 
-public class demo21 {
+public class demo021 {
     public class ListNode {
         int val;
         ListNode next;

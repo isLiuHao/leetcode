@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class demo09 {
+public class demo009 {
     @Test
     public boolean isPalindrome() {
         String s="()";

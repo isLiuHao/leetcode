@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 
-public class demo03 {
+public class demo003 {
     public int lengthOfLongestSubstring(String s) {
         if(s.length()==0)return 0;
         int left=0,max=0;

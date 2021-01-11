@@ -2,7 +2,7 @@ package leetcode;
 
 import org.junit.Test;
 
-public class demo28 {
+public class demo028 {
     @Test
     public  void test() {
         String st1="mississippi";

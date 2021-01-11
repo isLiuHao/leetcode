@@ -2,7 +2,7 @@ package leetcode;
 
 import org.junit.Test;
 
-public class demo38 {
+public class demo038 {
     @Test
     public void aa(){
         countAndSay(5);

@@ -1,6 +1,6 @@
 package leetcode;
 
-public class demo67 {
+public class demo067 {
     public String addBinary(String a, String b) {
         String s="";
         int count=0;
