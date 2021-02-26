@@ -11,7 +11,7 @@ public class demo050 {
             b=-b;
         }
         while(b>0){ //n转化为二进制 x^n=x^(1b1)*x^(2b2)....x^(2^m-1 bm)
-            if((b%2)==1) sum*=x; //判断二进制位为几
+            if((b%2)==1) sum*=x; //判断二进制最后一位为几
             x*=x;
             b=b>>1;
         }
