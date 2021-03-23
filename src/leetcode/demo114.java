@@ -2,7 +2,6 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class demo114 {
     public class TreeNode {
@@ -11,26 +10,29 @@ public class demo114 {
         TreeNode right;
         TreeNode() {}
         TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left,TreeNode right) {
+        TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
             this.right = right;
         }
     }
-    List<Integer> lists=new ArrayList<>();
-    public List<Integer> preorderTraversal(TreeNode root) {
-        Stack<TreeNode> s=new Stack<>();
-        while(root!=null||!s.isEmpty()){
-            if(root!=null){
-                lists.add(root.val);
-                s.add(root);
-                root=root.left;
-            }
-            else{
-                root=s.pop();
-                root=root.right;
-            }
+    List<TreeNode> list=new ArrayList<>();
+    public void flatten(TreeNode root) {
+        if(root == null) return;
+        inorder(root);
+        TreeNode pre=list.get(0);
+        for(int i=1;i<list.size();i++){
+            TreeNode next=list.get(i);
+            pre.left=null;
+            pre.right=next;
+            pre=pre.right;
         }
-        return lists;
+    }
+    public void inorder(TreeNode root){
+        if(root!=null){
+            list.add(root);
+            inorder(root.left);
+            inorder(root.right);
+        }
     }
 }
