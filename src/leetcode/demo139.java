@@ -8,7 +8,7 @@ public class demo139 {
         dp[0]=true;
         for(int i=1;i<=s.length();i++){
             for(int j=0;j<i;j++){
-                if(dp[j]&&wordDict.contains(s.substring(j,i))){//dp[j]&&check[j...i-1],substring左闭右开
+                if(dp[j]&&wordDict.contains(s.substring(j,i))){ //dp[j]&&check[j...i-1],substring左闭右开
                     dp[i]=true;
                     break;
                 }
