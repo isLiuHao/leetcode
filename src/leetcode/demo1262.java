@@ -1,5 +1,9 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class demo1262 {
     public int maxSumDivThree(int[] nums) {
         int n=nums.length;
@@ -25,5 +29,38 @@ public class demo1262 {
             }
         }
         return dp[n][0];
+    }
+    public int maxSumDivThree1(int[] nums) {
+        int n=nums.length;
+        List<Integer> list1=new ArrayList<>();
+        List<Integer> list2=new ArrayList<>();
+        Arrays.sort(nums);
+        int max=0;
+        for(int i=0;i<n;i++){
+            if(nums[i]%3==1)list1.add(nums[i]);
+            if(nums[i]%3==2)list2.add(nums[i]);
+            max+=nums[i];
+        }
+        if(max%3==1){
+            if(list2.size()>2&&list2.get(0)+list2.get(1)<list1.get(0)){
+                max-=list2.get(0);
+                max-=list2.get(1);
+            }
+            else{
+                max-=list1.get(0);
+                list1.remove(0);
+            }
+        }
+        else if(max%3==2){
+            if(list1.size()>2&&list1.get(0)+list1.get(1)<list2.get(0)){
+                max-=list1.get(0);
+                max-=list1.get(1);
+            }
+            else{
+                max-=list2.get(0);
+                list2.remove(0);
+            }
+        }
+        return max%3==0?max:0;
     }
 }
